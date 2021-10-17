@@ -46,10 +46,12 @@ function getRandomArbitrary() {
 
     return Math.floor(Math.random() * max); 
   }
-  const includeOf = function(str,cha) {
-for (let i = 0; i < str.length; i++) {
-if(str[i].includeOf (cha)){
-return true
-}
-    return fales;
-}}
+  const includeOf = function (str, char) {
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] == char) {
+        return true;
+      }
+    }
+    return false;
+  };
+  
