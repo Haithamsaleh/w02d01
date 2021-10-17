@@ -18,16 +18,15 @@ const updateOrCreate = function (array, index, value) {
 return array ;
 }}
 const onlyString = function (array) {
-
-for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] == "Number") {
-        result.slice(array[i]);
-return array;
- }
-
-
+    const result = [];
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] === "string") {
+        result.push(array[i]);
+      }
     }
-}  
+    return result;
+  };
+ 
 const users = [
     ["Jane", "123456" ],
     ["admin", "abc123" ],
@@ -42,8 +41,25 @@ const users = [
     //     return " Login Failed";
 
     // }
-    for (let i = 0; i <=1; ++i) {
-        if (username == users[0][i]  &&  password == users [0][i]){
-                return 'Login Successful' ;
+    for(let i=0;i<users.length;i++)
+    {
+        if( username == users[i][0] && password == users[i][1])
+        {
+           return "Login Successful";
+        }
+    }
+    return "Login Failed"
+  
+  };
 
-  }return 'Login Failed';}}
+  const maximumNumber = function (num) {
+      return Math.max.apply(null, num);
+  };
+  
+  const reversString = function (string) {
+     arr=string.split('');
+     rev=arr.reverse();
+     join= rev.join("");
+    
+     return rev;
+  };
